@@ -1,0 +1,25 @@
+{
+  "name": "cms-module",
+  "version": "1.0.0",
+  "description": "module for calling cms",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "test": "test",
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krychuq1/cms-module.git"
+  },
+  "author": "krystian nagorny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krychuq1/cms-module/issues"
+  },
+  "homepage": "https://github.com/krychuq1/cms-module#readme",
+  "dependencies": {
+    "ts-node-dev": "^1.0.0-pre.39",
+    "typescript": "^3.4.5"
+  }
+}
