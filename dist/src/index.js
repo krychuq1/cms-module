@@ -1,12 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Cms = /** @class */ (function () {
-    function Cms() {
+class Cms {
+    constructor() {
     }
-    Cms.prototype.printMe = function () {
+    printMe() {
         console.log('test');
-    };
-    return Cms;
-}());
-var cmsObj = new Cms();
+    }
+}
+const cmsObj = new Cms();
 exports.default = cmsObj;
