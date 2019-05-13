@@ -8,4 +8,5 @@ var Cms = /** @class */ (function () {
     };
     return Cms;
 }());
-exports.default = new Cms();
+var cmsObj = new Cms();
+exports.default = cmsObj;

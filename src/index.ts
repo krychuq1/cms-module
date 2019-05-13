@@ -6,5 +6,5 @@ class Cms {
     console.log('test');
   }
 }
-
-export default new Cms()
+const cmsObj = new Cms();
+export default cmsObj;
