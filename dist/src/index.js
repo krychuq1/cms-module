@@ -12,7 +12,7 @@ var Cms = /** @class */ (function () {
     Cms.prototype.getContent = function (type, name, language) {
         var url = this.url + type + '/' + name + '/' + language;
         return axios_1.default.get(url).then(function (data) {
-            return data;
+            return data.data[0].content;
         }, function (error) {
             return error;
         });

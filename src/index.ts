@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosError } from 'axios';
+import axios, {AxiosError } from 'axios';
 
 class Cms {
     public projectId: string;
@@ -8,10 +8,10 @@ class Cms {
         this.projectId = projectId;
         this.url = 'https://translation-backend.sevenamstudio.com/api/content/' + projectId + '/'
     }
-    public getContent(type: string, name: string, language: string): Promise<AxiosResponse<object[]> | AxiosError> {
+    public getContent(type: string, name: string, language: string): Promise<object | AxiosError> {
         let url = this.url + type + '/' + name + '/' + language;
-        return axios.get <object[]> (url).then((data)=>{
-            return data;
+        return axios.get(url).then((data)=>{
+            return data.data[0].content;
         }, (error): AxiosError => {
             return error;
         })
@@ -19,7 +19,7 @@ class Cms {
 
 }
 // console.log("test");
-// const cmsObj = new Cms('5cc969d652f93943b29f8bd2');
+// const cmsObj = new Cms('5cd32397704b4f4792dac3be');
 // cmsObj.getContent('component', 'header', 'Polish').then((data)=>{
 //   console.log(data);
 // }, (error): AxiosError => {
